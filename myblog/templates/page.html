@@ -1,0 +1,46 @@
+﻿{% extends "base.html" %}
+{% block content %}
+    <div id="main-container" class="container11">
+        <section class="post-left">
+            <div class="breadcrumb">您的位置： <a itemprop="breadcrumb" href="/">首页</a> » <span class="current">关于我们</span>
+            </div>
+            <div class="post-main clearfix">
+                <h1 class="post-title">关于我们</h1>
+                <div class="post-con clearfix">
+                    <div class="article-meta"><span class="item">2023/05/06</span></div>
+                    <article class="article-content">
+                        <p>
+                            1、本网站博客内容来自csdn和掘金等网站，不会商用，仅用于学习交流</p>
+                        <p>
+                            2、因为时间和能力比较有限，本网站提供的内容以及功能较为有限，请多多包容</p>
+
+
+                    </article>
+
+                </div>
+
+            </div>
+            <!-- /文章 -->
+        </section>
+        <!-- /post-left -->
+        <!-- /post-right -->
+        <aside class="post-right hidden-xs">
+            <!-- /关注我们 -->
+            <div class="post-right-item">
+                <h4 class="post-right-title">联系我们</h4>
+                <div class="wid-about">
+                    <p>如果有任何问题，请联系我们</p>
+                </div>
+                <div class="wid-about">
+                    <p class="zi"><strong>联系方式:</strong></p>
+                    <p><img class="lianjie" src="{% url 'index' %}static/picture/dianhua.png" width="20" height="20" style="margin-top:10px">:12345678910</p>
+                    <p><img class="lianjie" src="{% url 'index' %}static/picture/qq.png" width="20" height="20" style="margin-top:10px">:321547519hh</p>
+                    <p><img class="lianjie" src="{% url 'index' %}static/picture/email.png" width="20" height="20" style="margin-top:10px">:321547519hh@qq.com</p>
+                </div>
+            </div>
+
+        </aside>
+    </div>
+    <!-- /主体 -->
+    <!-- 底部 -->
+{% endblock %}

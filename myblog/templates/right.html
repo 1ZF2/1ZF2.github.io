@@ -1,0 +1,42 @@
+{% load static %}
+<section class="widget post-right-item">
+    <h4 class="post-right-title">热门推荐</h4>
+    <ul class="post-hot clearfix">
+        {% for k in remen %}
+            <li class="dakuai">
+                <div class="imgnew">
+                    <span class="left11" >
+                        <a href="{% url 'index' %}show-{{ k.id }}.html" title="{{ k.title }}" >
+                        <img src="{% url 'index' %}media/{{ k.img }}" srcset="{% url 'index' %}media/{{ k.img }}" alt="{{ k.title }}"
+                             class="wp-post-image" width="120" height="80" />
+                    </a></span>
+                    <span class="right11" >
+                        <a href="{% url 'index' %}show-{{ k.id }}.html" title="{{ k.title }}"
+                       target="_blank" class="geshi">{{ k.title }}</a></span>
+                </div>
+            </li>
+        {% endfor %}
+    </ul>
+</section>
+
+</section>
+<section class="widget post-right-item"><h4 class="post-right-title">所有标签</h4>
+    <div class="tags">
+        {% for tag in tags %}
+            <a href="{% url 'index' %}tag/{{ tag.name }}">{{ tag.name }}</a>
+        {% endfor %}
+    </div>
+</section>
+</section><!-- /关注我们 -->
+<div class="post-right-item">
+    <h4 class="post-right-title">联系我们</h4>
+    <div class="wid-about">
+        <p>如果有任何问题，请联系我们</p>
+    </div>
+    <div class="wid-about">
+        <p><strong>联系方式:</strong></p>
+        <p><img src="{% static "picture/dianhua.png" %}" alt="电话号码" width="20" height="20" style="margin-top:10px">:12345678910</p>
+        <p><img src="{% static "picture/qq.png" %}" alt="QQ" width="20" height="20" style="margin-top:10px">:321547519hh</p>
+        <p><img src="{% static "picture/email.png" %}" alt="Email" width="20" height="20" style="margin-top:10px">:321547519hh@qq.com</p>
+    </div>
+</div>
